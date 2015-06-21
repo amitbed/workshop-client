@@ -1,0 +1,14 @@
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe.config
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.HomePageForm.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.Form1.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.ForumForm.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.LoginForm.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.RegisterForm.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csproj.GenerateResource.Cache
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.exe
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.pdb
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.pdb
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.SubForumForm.resources
