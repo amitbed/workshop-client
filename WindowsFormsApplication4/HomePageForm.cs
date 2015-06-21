@@ -48,18 +48,37 @@ namespace WindowsFormsApplication4
             {
                 HttpResponseMessage resp = client.GetAsync("api/ApiForum").Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
-                if (resp.Content == null)
+                string response = resp.Content.ReadAsAsync<string>().Result;
+                if (String.IsNullOrEmpty(response))
                 {
                     listBox1.Text = "No Forums in the system";
                 }
                 else
                 {
-                    List<string> result = resp.Content.ReadAsAsync<string>().Result.Split(' ').ToList();
+                    List<string> result = response.Split(' ').ToList();
                     foreach (string s in result)
                     {
                         listBox1.Items.Add(s);
                     }
-                } 
+                }
+
+                HttpResponseMessage resp1 = client.GetAsync("api/ApiMember").Result;
+                resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                string response1 = resp1.Content.ReadAsAsync<string>().Result;
+
+                if (String.IsNullOrEmpty(response1))
+                {
+                    listBox1.Text = "No Members in the system";
+                }
+                else
+                {
+                    List<string> result = response1.Split(' ').ToList();
+                    foreach (string s in result)
+                    {
+                        listBox1.Items.Add(s);
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -86,6 +105,11 @@ namespace WindowsFormsApplication4
             admins.Add(currAdmins);
             adminsComboBox.Items.Remove(currAdmins);
             adminsComboBox.Text = String.Empty;
+        }
+
+        private void addnewforumBtn_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(ForumNameTextBox.Text);
         }
     }
 }

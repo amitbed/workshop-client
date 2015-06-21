@@ -127,6 +127,7 @@
             this.addnewforumBtn.TabIndex = 14;
             this.addnewforumBtn.Text = "add new forum";
             this.addnewforumBtn.UseVisualStyleBackColor = true;
+            this.addnewforumBtn.Click += new System.EventHandler(this.addnewforumBtn_Click);
             // 
             // AdminsLbl
             // 
