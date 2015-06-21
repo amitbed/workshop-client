@@ -9,3 +9,17 @@ C:\Users\Amit\Documents\Visual Studio 2012\Projects\WindowsFormsApplication4\Win
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.HomePageForm.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.ForumForm.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.LoginForm.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.RegisterForm.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.SubForumForm.resources
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Debug\Newtonsoft.Json.dll
