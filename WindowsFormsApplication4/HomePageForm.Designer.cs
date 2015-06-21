@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomePageLbl = new System.Windows.Forms.Label();
             this.OurForumApplicationLbl = new System.Windows.Forms.Label();
-            this.enterForumNameLbl = new System.Windows.Forms.Label();
-            this.ForumNameTextBox = new System.Windows.Forms.TextBox();
-            this.AdminsLbl = new System.Windows.Forms.Label();
-            this.AdminsCheckBox = new System.Windows.Forms.CheckedListBox();
-            this.addnewforumBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.addnewforumBtn = new System.Windows.Forms.Button();
+            this.AdminsCheckBox = new System.Windows.Forms.CheckedListBox();
+            this.AdminsLbl = new System.Windows.Forms.Label();
+            this.ForumNameTextBox = new System.Windows.Forms.TextBox();
+            this.enterForumNameLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.usernameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -70,6 +73,13 @@
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Text = "hello ";
+            // 
             // HomePageLbl
             // 
             this.HomePageLbl.AutoSize = true;
@@ -84,58 +94,16 @@
             // 
             this.OurForumApplicationLbl.AutoSize = true;
             this.OurForumApplicationLbl.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OurForumApplicationLbl.Location = new System.Drawing.Point(388, 77);
+            this.OurForumApplicationLbl.Location = new System.Drawing.Point(399, 77);
             this.OurForumApplicationLbl.Name = "OurForumApplicationLbl";
             this.OurForumApplicationLbl.Size = new System.Drawing.Size(303, 42);
             this.OurForumApplicationLbl.TabIndex = 2;
             this.OurForumApplicationLbl.Text = "Our Forum Application";
             // 
-            // enterForumNameLbl
-            // 
-            this.enterForumNameLbl.AutoSize = true;
-            this.enterForumNameLbl.Location = new System.Drawing.Point(84, 139);
-            this.enterForumNameLbl.Name = "enterForumNameLbl";
-            this.enterForumNameLbl.Size = new System.Drawing.Size(118, 17);
-            this.enterForumNameLbl.TabIndex = 3;
-            this.enterForumNameLbl.Text = "Enter Forum Name";
-            // 
-            // ForumNameTextBox
-            // 
-            this.ForumNameTextBox.Location = new System.Drawing.Point(87, 169);
-            this.ForumNameTextBox.Name = "ForumNameTextBox";
-            this.ForumNameTextBox.Size = new System.Drawing.Size(270, 25);
-            this.ForumNameTextBox.TabIndex = 4;
-            // 
-            // AdminsLbl
-            // 
-            this.AdminsLbl.AutoSize = true;
-            this.AdminsLbl.Location = new System.Drawing.Point(84, 218);
-            this.AdminsLbl.Name = "AdminsLbl";
-            this.AdminsLbl.Size = new System.Drawing.Size(99, 17);
-            this.AdminsLbl.TabIndex = 5;
-            this.AdminsLbl.Text = "Choose Admins";
-            // 
-            // AdminsCheckBox
-            // 
-            this.AdminsCheckBox.FormattingEnabled = true;
-            this.AdminsCheckBox.Location = new System.Drawing.Point(87, 250);
-            this.AdminsCheckBox.Name = "AdminsCheckBox";
-            this.AdminsCheckBox.Size = new System.Drawing.Size(270, 104);
-            this.AdminsCheckBox.TabIndex = 6;
-            // 
-            // addnewforumBtn
-            // 
-            this.addnewforumBtn.Location = new System.Drawing.Point(282, 372);
-            this.addnewforumBtn.Name = "addnewforumBtn";
-            this.addnewforumBtn.Size = new System.Drawing.Size(75, 44);
-            this.addnewforumBtn.TabIndex = 7;
-            this.addnewforumBtn.Text = "add new forum";
-            this.addnewforumBtn.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(392, 139);
+            this.label1.Location = new System.Drawing.Point(84, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 8;
@@ -145,10 +113,52 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(395, 169);
+            this.listBox1.Location = new System.Drawing.Point(87, 156);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(296, 191);
             this.listBox1.TabIndex = 9;
+            // 
+            // addnewforumBtn
+            // 
+            this.addnewforumBtn.Location = new System.Drawing.Point(601, 365);
+            this.addnewforumBtn.Name = "addnewforumBtn";
+            this.addnewforumBtn.Size = new System.Drawing.Size(75, 44);
+            this.addnewforumBtn.TabIndex = 14;
+            this.addnewforumBtn.Text = "add new forum";
+            this.addnewforumBtn.UseVisualStyleBackColor = true;
+            // 
+            // AdminsCheckBox
+            // 
+            this.AdminsCheckBox.FormattingEnabled = true;
+            this.AdminsCheckBox.Location = new System.Drawing.Point(406, 243);
+            this.AdminsCheckBox.Name = "AdminsCheckBox";
+            this.AdminsCheckBox.Size = new System.Drawing.Size(270, 104);
+            this.AdminsCheckBox.TabIndex = 13;
+            // 
+            // AdminsLbl
+            // 
+            this.AdminsLbl.AutoSize = true;
+            this.AdminsLbl.Location = new System.Drawing.Point(403, 211);
+            this.AdminsLbl.Name = "AdminsLbl";
+            this.AdminsLbl.Size = new System.Drawing.Size(99, 17);
+            this.AdminsLbl.TabIndex = 12;
+            this.AdminsLbl.Text = "Choose Admins";
+            // 
+            // ForumNameTextBox
+            // 
+            this.ForumNameTextBox.Location = new System.Drawing.Point(406, 162);
+            this.ForumNameTextBox.Name = "ForumNameTextBox";
+            this.ForumNameTextBox.Size = new System.Drawing.Size(270, 25);
+            this.ForumNameTextBox.TabIndex = 11;
+            // 
+            // enterForumNameLbl
+            // 
+            this.enterForumNameLbl.AutoSize = true;
+            this.enterForumNameLbl.Location = new System.Drawing.Point(403, 132);
+            this.enterForumNameLbl.Name = "enterForumNameLbl";
+            this.enterForumNameLbl.Size = new System.Drawing.Size(118, 17);
+            this.enterForumNameLbl.TabIndex = 10;
+            this.enterForumNameLbl.Text = "Enter Forum Name";
             // 
             // HomePageForm
             // 
@@ -156,13 +166,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.addnewforumBtn);
             this.Controls.Add(this.AdminsCheckBox);
             this.Controls.Add(this.AdminsLbl);
             this.Controls.Add(this.ForumNameTextBox);
             this.Controls.Add(this.enterForumNameLbl);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.OurForumApplicationLbl);
             this.Controls.Add(this.HomePageLbl);
             this.Controls.Add(this.menuStrip1);
@@ -186,12 +196,13 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.Label HomePageLbl;
         private System.Windows.Forms.Label OurForumApplicationLbl;
-        private System.Windows.Forms.Label enterForumNameLbl;
-        private System.Windows.Forms.TextBox ForumNameTextBox;
-        private System.Windows.Forms.Label AdminsLbl;
-        private System.Windows.Forms.CheckedListBox AdminsCheckBox;
-        private System.Windows.Forms.Button addnewforumBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
+        private System.Windows.Forms.Button addnewforumBtn;
+        private System.Windows.Forms.CheckedListBox AdminsCheckBox;
+        private System.Windows.Forms.Label AdminsLbl;
+        private System.Windows.Forms.TextBox ForumNameTextBox;
+        private System.Windows.Forms.Label enterForumNameLbl;
     }
 }

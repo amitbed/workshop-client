@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateNewAccountLbl = new System.Windows.Forms.Label();
             this.RegisterLbl = new System.Windows.Forms.Label();
             this.UsernameLbl = new System.Windows.Forms.Label();
@@ -40,6 +42,7 @@
             this.ConfimPasswordTextBox = new System.Windows.Forms.TextBox();
             this.ConfimPasswordLbl = new System.Windows.Forms.Label();
             this.RegisterBtn = new System.Windows.Forms.Button();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.usernameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(794, 25);
@@ -66,6 +70,14 @@
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
             this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Text = "hello ";
             // 
             // CreateNewAccountLbl
             // 
@@ -143,6 +155,7 @@
             this.RegisterBtn.TabIndex = 11;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = true;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // RegisterForm
             // 
@@ -186,5 +199,7 @@
         private System.Windows.Forms.TextBox ConfimPasswordTextBox;
         private System.Windows.Forms.Label ConfimPasswordLbl;
         private System.Windows.Forms.Button RegisterBtn;
+        private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }

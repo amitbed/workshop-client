@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,7 @@
             this.loginCheckBox = new System.Windows.Forms.CheckBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.registerLinkLbl = new System.Windows.Forms.LinkLabel();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,8 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.usernameToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -61,6 +64,7 @@
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
             this.registerToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.registerToolStripMenuItem.Text = "Register";
+            this.registerToolStripMenuItem.Click += new System.EventHandler(this.registerToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
@@ -151,6 +155,13 @@
             this.registerLinkLbl.Text = "Register if you don\'t have an account";
             this.registerLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLinkLbl_LinkClicked);
             // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Text = "hello ";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -192,5 +203,6 @@
         private System.Windows.Forms.CheckBox loginCheckBox;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.LinkLabel registerLinkLbl;
+        private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
     }
 }

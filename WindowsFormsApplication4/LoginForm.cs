@@ -12,17 +12,30 @@ namespace WindowsFormsApplication4
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        HomePageForm hpf;
+        public LoginForm(HomePageForm hpf)
         {
             InitializeComponent();
+            this.hpf = hpf;
+            usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString() + hpf.getUsername();
+            PasswordTextBox.PasswordChar = '*';
+            PasswordTextBox.MaxLength = 10;
+
         }
 
         private void registerLinkLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form registerForm = new RegisterForm();
+            Form registerForm = new RegisterForm(hpf);
             registerForm.Show();
             this.Close();
 
+        }
+
+        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form registerForm = new RegisterForm(hpf);
+            registerForm.Show();
+            this.Close();
         }
     }
 }
