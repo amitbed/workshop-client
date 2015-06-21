@@ -35,6 +35,7 @@ namespace WindowsFormsApplication4
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
+
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
