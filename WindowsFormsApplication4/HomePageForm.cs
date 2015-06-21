@@ -15,7 +15,7 @@ namespace WindowsFormsApplication4
     public partial class HomePageForm : Form
     {
         public string username = "guest";
-
+        public List<string> admins = new List<string>();
         public string getUsername()
         {
             return username;
@@ -36,14 +36,17 @@ namespace WindowsFormsApplication4
         private void HomePageForm_Load(object sender, EventArgs e)
         {
 
+            adminsComboBox.Items.Add("nofarb");
+            adminsComboBox.Items.Add("amitbed");
+            adminsComboBox.Items.Add("sagiav");
+
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
             {
-                HttpResponseMessage resp = client.GetAsync("api/Values").Result;
-                listBox1.Text = "";
+                HttpResponseMessage resp = client.GetAsync("api/ApiForum").Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                 if (resp.Content == null)
                 {
@@ -51,11 +54,12 @@ namespace WindowsFormsApplication4
                 }
                 else
                 {
-                    //    listBox1.Text = resp.Content
-                }
-
-
-                label1.Text = resp.Content.ReadAsAsync<IEnumerable<string>>().Result.First();
+                    List<string> result = resp.Content.ReadAsAsync<string>().Result.Split(' ').ToList();
+                    foreach (string s in result)
+                    {
+                        listBox1.Items.Add(s);
+                    }
+                } 
             }
             catch (Exception ex)
             {
@@ -74,6 +78,14 @@ namespace WindowsFormsApplication4
         {
             Form loginForm = new LoginForm(this);
             loginForm.Show();
+        }
+
+        private void addAdminBtn_Click(object sender, EventArgs e)
+        {
+            string currAdmins = adminsComboBox.Text.ToString();
+            admins.Add(currAdmins);
+            adminsComboBox.Items.Remove(currAdmins);
+            adminsComboBox.Text = String.Empty;
         }
     }
 }

@@ -12,3 +12,4 @@ C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.pdb
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
 C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.SubForumForm.resources
+C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\bin\Release\Newtonsoft.Json.dll

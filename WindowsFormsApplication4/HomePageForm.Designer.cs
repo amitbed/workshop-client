@@ -38,10 +38,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.addnewforumBtn = new System.Windows.Forms.Button();
-            this.AdminsCheckBox = new System.Windows.Forms.CheckedListBox();
             this.AdminsLbl = new System.Windows.Forms.Label();
             this.ForumNameTextBox = new System.Windows.Forms.TextBox();
             this.enterForumNameLbl = new System.Windows.Forms.Label();
+            this.adminsComboBox = new System.Windows.Forms.ComboBox();
+            this.addAdminBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,20 +121,12 @@
             // 
             // addnewforumBtn
             // 
-            this.addnewforumBtn.Location = new System.Drawing.Point(601, 365);
+            this.addnewforumBtn.Location = new System.Drawing.Point(601, 303);
             this.addnewforumBtn.Name = "addnewforumBtn";
             this.addnewforumBtn.Size = new System.Drawing.Size(75, 44);
             this.addnewforumBtn.TabIndex = 14;
             this.addnewforumBtn.Text = "add new forum";
             this.addnewforumBtn.UseVisualStyleBackColor = true;
-            // 
-            // AdminsCheckBox
-            // 
-            this.AdminsCheckBox.FormattingEnabled = true;
-            this.AdminsCheckBox.Location = new System.Drawing.Point(406, 243);
-            this.AdminsCheckBox.Name = "AdminsCheckBox";
-            this.AdminsCheckBox.Size = new System.Drawing.Size(270, 104);
-            this.AdminsCheckBox.TabIndex = 13;
             // 
             // AdminsLbl
             // 
@@ -160,14 +153,33 @@
             this.enterForumNameLbl.TabIndex = 10;
             this.enterForumNameLbl.Text = "Enter Forum Name";
             // 
+            // adminsComboBox
+            // 
+            this.adminsComboBox.FormattingEnabled = true;
+            this.adminsComboBox.Location = new System.Drawing.Point(406, 231);
+            this.adminsComboBox.Name = "adminsComboBox";
+            this.adminsComboBox.Size = new System.Drawing.Size(145, 25);
+            this.adminsComboBox.TabIndex = 15;
+            // 
+            // addAdminBtn
+            // 
+            this.addAdminBtn.Location = new System.Drawing.Point(567, 231);
+            this.addAdminBtn.Name = "addAdminBtn";
+            this.addAdminBtn.Size = new System.Drawing.Size(109, 25);
+            this.addAdminBtn.TabIndex = 16;
+            this.addAdminBtn.Text = "add admin";
+            this.addAdminBtn.UseVisualStyleBackColor = true;
+            this.addAdminBtn.Click += new System.EventHandler(this.addAdminBtn_Click);
+            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
+            this.Controls.Add(this.addAdminBtn);
+            this.Controls.Add(this.adminsComboBox);
             this.Controls.Add(this.addnewforumBtn);
-            this.Controls.Add(this.AdminsCheckBox);
             this.Controls.Add(this.AdminsLbl);
             this.Controls.Add(this.ForumNameTextBox);
             this.Controls.Add(this.enterForumNameLbl);
@@ -200,9 +212,10 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
         private System.Windows.Forms.Button addnewforumBtn;
-        private System.Windows.Forms.CheckedListBox AdminsCheckBox;
         private System.Windows.Forms.Label AdminsLbl;
         private System.Windows.Forms.TextBox ForumNameTextBox;
         private System.Windows.Forms.Label enterForumNameLbl;
+        private System.Windows.Forms.ComboBox adminsComboBox;
+        private System.Windows.Forms.Button addAdminBtn;
     }
 }
