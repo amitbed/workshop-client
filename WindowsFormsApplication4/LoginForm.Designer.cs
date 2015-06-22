@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomePageLbl = new System.Windows.Forms.Label();
             this.OurForumApplicationLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.loginCheckBox = new System.Windows.Forms.CheckBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.registerLinkLbl = new System.Windows.Forms.LinkLabel();
-            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,13 @@
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
             this.loginToolStripMenuItem.Text = "Login";
+            // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Text = "hello ";
             // 
             // HomePageLbl
             // 
@@ -110,7 +117,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(88, 268);
+            this.PasswordTextBox.Location = new System.Drawing.Point(88, 253);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(168, 25);
             this.PasswordTextBox.TabIndex = 8;
@@ -118,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 248);
+            this.label2.Location = new System.Drawing.Point(85, 233);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(65, 17);
@@ -128,7 +135,7 @@
             // loginCheckBox
             // 
             this.loginCheckBox.AutoSize = true;
-            this.loginCheckBox.Location = new System.Drawing.Point(88, 299);
+            this.loginCheckBox.Location = new System.Drawing.Point(88, 295);
             this.loginCheckBox.Name = "loginCheckBox";
             this.loginCheckBox.Size = new System.Drawing.Size(116, 21);
             this.loginCheckBox.TabIndex = 9;
@@ -143,6 +150,7 @@
             this.LoginBtn.TabIndex = 10;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // registerLinkLbl
             // 
@@ -154,13 +162,6 @@
             this.registerLinkLbl.TabStop = true;
             this.registerLinkLbl.Text = "Register if you don\'t have an account";
             this.registerLinkLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLinkLbl_LinkClicked);
-            // 
-            // usernameToolStripMenuItem
-            // 
-            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
-            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.usernameToolStripMenuItem.Text = "hello ";
             // 
             // LoginForm
             // 

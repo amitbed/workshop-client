@@ -43,8 +43,6 @@
             this.enterForumNameLbl = new System.Windows.Forms.Label();
             this.adminsComboBox = new System.Windows.Forms.ComboBox();
             this.addAdminBtn = new System.Windows.Forms.Button();
-            this.ForumDescriptionLbl = new System.Windows.Forms.Label();
-            this.DescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +121,7 @@
             // 
             // addnewforumBtn
             // 
-            this.addnewforumBtn.Location = new System.Drawing.Point(601, 366);
+            this.addnewforumBtn.Location = new System.Drawing.Point(600, 291);
             this.addnewforumBtn.Name = "addnewforumBtn";
             this.addnewforumBtn.Size = new System.Drawing.Size(75, 44);
             this.addnewforumBtn.TabIndex = 14;
@@ -134,7 +132,7 @@
             // AdminsLbl
             // 
             this.AdminsLbl.AutoSize = true;
-            this.AdminsLbl.Location = new System.Drawing.Point(403, 315);
+            this.AdminsLbl.Location = new System.Drawing.Point(403, 191);
             this.AdminsLbl.Name = "AdminsLbl";
             this.AdminsLbl.Size = new System.Drawing.Size(99, 17);
             this.AdminsLbl.TabIndex = 12;
@@ -159,14 +157,14 @@
             // adminsComboBox
             // 
             this.adminsComboBox.FormattingEnabled = true;
-            this.adminsComboBox.Location = new System.Drawing.Point(406, 335);
+            this.adminsComboBox.Location = new System.Drawing.Point(406, 211);
             this.adminsComboBox.Name = "adminsComboBox";
             this.adminsComboBox.Size = new System.Drawing.Size(145, 25);
             this.adminsComboBox.TabIndex = 15;
             // 
             // addAdminBtn
             // 
-            this.addAdminBtn.Location = new System.Drawing.Point(567, 335);
+            this.addAdminBtn.Location = new System.Drawing.Point(567, 211);
             this.addAdminBtn.Name = "addAdminBtn";
             this.addAdminBtn.Size = new System.Drawing.Size(109, 25);
             this.addAdminBtn.TabIndex = 16;
@@ -174,31 +172,12 @@
             this.addAdminBtn.UseVisualStyleBackColor = true;
             this.addAdminBtn.Click += new System.EventHandler(this.addAdminBtn_Click);
             // 
-            // ForumDescriptionLbl
-            // 
-            this.ForumDescriptionLbl.AutoSize = true;
-            this.ForumDescriptionLbl.Location = new System.Drawing.Point(401, 185);
-            this.ForumDescriptionLbl.Name = "ForumDescriptionLbl";
-            this.ForumDescriptionLbl.Size = new System.Drawing.Size(148, 17);
-            this.ForumDescriptionLbl.TabIndex = 17;
-            this.ForumDescriptionLbl.Text = "Enter Forum description";
-            // 
-            // DescriptionRichTextBox
-            // 
-            this.DescriptionRichTextBox.Location = new System.Drawing.Point(405, 205);
-            this.DescriptionRichTextBox.Name = "DescriptionRichTextBox";
-            this.DescriptionRichTextBox.Size = new System.Drawing.Size(269, 96);
-            this.DescriptionRichTextBox.TabIndex = 19;
-            this.DescriptionRichTextBox.Text = "";
-            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
-            this.Controls.Add(this.DescriptionRichTextBox);
-            this.Controls.Add(this.ForumDescriptionLbl);
             this.Controls.Add(this.addAdminBtn);
             this.Controls.Add(this.adminsComboBox);
             this.Controls.Add(this.addnewforumBtn);
@@ -239,7 +218,5 @@
         private System.Windows.Forms.Label enterForumNameLbl;
         private System.Windows.Forms.ComboBox adminsComboBox;
         private System.Windows.Forms.Button addAdminBtn;
-        private System.Windows.Forms.Label ForumDescriptionLbl;
-        private System.Windows.Forms.RichTextBox DescriptionRichTextBox;
     }
 }

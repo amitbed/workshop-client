@@ -32,15 +32,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ForumNameLbl = new System.Windows.Forms.Label();
             this.subForumsListBox = new System.Windows.Forms.ListBox();
             this.SubForumLbl = new System.Windows.Forms.Label();
             this.SubForumNameLbl = new System.Windows.Forms.Label();
             this.SubForumTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ModeratorsCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.usernameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAdminBtn = new System.Windows.Forms.Button();
+            this.moderatorsComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,14 @@
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
             this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // usernameToolStripMenuItem
+            // 
+            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
+            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Text = "hello ";
             // 
             // ForumNameLbl
             // 
@@ -124,29 +133,31 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Choose Moderators";
             // 
-            // ModeratorsCheckedListBox
-            // 
-            this.ModeratorsCheckedListBox.FormattingEnabled = true;
-            this.ModeratorsCheckedListBox.Location = new System.Drawing.Point(374, 214);
-            this.ModeratorsCheckedListBox.Name = "ModeratorsCheckedListBox";
-            this.ModeratorsCheckedListBox.Size = new System.Drawing.Size(198, 84);
-            this.ModeratorsCheckedListBox.TabIndex = 10;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 314);
+            this.button1.Location = new System.Drawing.Point(374, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 63);
             this.button1.TabIndex = 11;
             this.button1.Text = "add Sub-Forum";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // usernameToolStripMenuItem
+            // addAdminBtn
             // 
-            this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
-            this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.usernameToolStripMenuItem.Text = "hello ";
+            this.addAdminBtn.Location = new System.Drawing.Point(374, 245);
+            this.addAdminBtn.Name = "addAdminBtn";
+            this.addAdminBtn.Size = new System.Drawing.Size(109, 25);
+            this.addAdminBtn.TabIndex = 18;
+            this.addAdminBtn.Text = "add moderator";
+            this.addAdminBtn.UseVisualStyleBackColor = true;
+            // 
+            // moderatorsComboBox
+            // 
+            this.moderatorsComboBox.FormattingEnabled = true;
+            this.moderatorsComboBox.Location = new System.Drawing.Point(374, 214);
+            this.moderatorsComboBox.Name = "moderatorsComboBox";
+            this.moderatorsComboBox.Size = new System.Drawing.Size(145, 25);
+            this.moderatorsComboBox.TabIndex = 17;
             // 
             // ForumForm
             // 
@@ -154,8 +165,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
+            this.Controls.Add(this.addAdminBtn);
+            this.Controls.Add(this.moderatorsComboBox);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ModeratorsCheckedListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SubForumTextBox);
             this.Controls.Add(this.SubForumNameLbl);
@@ -167,6 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ForumForm";
             this.Text = "ForumForm";
+            this.Load += new System.EventHandler(this.ForumForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -185,8 +198,9 @@
         private System.Windows.Forms.Label SubForumNameLbl;
         private System.Windows.Forms.TextBox SubForumTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox ModeratorsCheckedListBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
+        private System.Windows.Forms.Button addAdminBtn;
+        private System.Windows.Forms.ComboBox moderatorsComboBox;
     }
 }
