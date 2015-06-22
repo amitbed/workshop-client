@@ -27,7 +27,7 @@ namespace WindowsFormsApplication4
             }
 
             PasswordTextBox.PasswordChar = '*';
-            PasswordTextBox.MaxLength = 10;
+            PasswordTextBox.MaxLength = 20;
 
         }
 
@@ -63,6 +63,10 @@ namespace WindowsFormsApplication4
             {
                 HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiLogin", args).Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                bool result = resp.Content.ReadAsAsync<bool>().Result;
+
+                hpf.setUsername(username);
+                this.Close();
             }
             catch (Exception ex)
             {

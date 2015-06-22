@@ -64,9 +64,10 @@ namespace WindowsFormsApplication4
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
-            adminsComboBox.Items.Add("nofarb");
-            adminsComboBox.Items.Add("amitbed");
-            adminsComboBox.Items.Add("sagiav");
+            //adminsComboBox.Items.Add("nofarb");
+            //adminsComboBox.Items.Add("amitbed");
+            //adminsComboBox.Items.Add("sagiav");
+            //ForumListBox.Items.Add("Food");
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:49417/");
@@ -132,6 +133,21 @@ namespace WindowsFormsApplication4
                 loginToolStripMenuItem.Text = "Login";
                 setUsername("guest");
                 usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString(); // + this.getUsername();
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiLogin", username).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
+                    resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                    bool response = resp.Content.ReadAsAsync<bool>().Result;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex);
+                }
             }
         }
 
@@ -199,6 +215,7 @@ namespace WindowsFormsApplication4
                 }
 
                 Form forumForm = new ForumForm(this, ForumListBox.SelectedItem.ToString(), subForums);
+                forumForm.Show();
             }
             catch (Exception ex)
             {

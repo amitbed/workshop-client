@@ -29,6 +29,11 @@ namespace WindowsFormsApplication4
                 loginToolStripMenuItem.Text = "logout";
             }
 
+            SubForumLbl.Hide();
+            SubForumNameLbl.Hide();
+            moderatorsComboBox.Hide();
+            addModeratorBtn.Hide();
+            moderatorsLbl.Hide();
         }
 
         private void ForumForm_Load(object sender, EventArgs e)
@@ -81,6 +86,21 @@ namespace WindowsFormsApplication4
                 loginToolStripMenuItem.Text = "Login";
                 hpf.setUsername("guest");
                 usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString() + hpf.getUsername();
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiLogin", hpf.getUsername()).Result;
+                    resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                    bool response = resp.Content.ReadAsAsync<bool>().Result;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex);
+                }
             }
         }
     }

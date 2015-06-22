@@ -38,9 +38,9 @@
             this.SubForumLbl = new System.Windows.Forms.Label();
             this.SubForumNameLbl = new System.Windows.Forms.Label();
             this.SubForumTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.addAdminBtn = new System.Windows.Forms.Button();
+            this.moderatorsLbl = new System.Windows.Forms.Label();
+            this.addSubForumBtn = new System.Windows.Forms.Button();
+            this.addModeratorBtn = new System.Windows.Forms.Button();
             this.moderatorsComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -124,32 +124,32 @@
             this.SubForumTextBox.Size = new System.Drawing.Size(201, 25);
             this.SubForumTextBox.TabIndex = 8;
             // 
-            // label1
+            // moderatorsLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(371, 194);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Choose Moderators";
+            this.moderatorsLbl.AutoSize = true;
+            this.moderatorsLbl.Location = new System.Drawing.Point(371, 194);
+            this.moderatorsLbl.Name = "moderatorsLbl";
+            this.moderatorsLbl.Size = new System.Drawing.Size(126, 17);
+            this.moderatorsLbl.TabIndex = 9;
+            this.moderatorsLbl.Text = "Choose Moderators";
             // 
-            // button1
+            // addSubForumBtn
             // 
-            this.button1.Location = new System.Drawing.Point(374, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 63);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "add Sub-Forum";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addSubForumBtn.Location = new System.Drawing.Point(374, 322);
+            this.addSubForumBtn.Name = "addSubForumBtn";
+            this.addSubForumBtn.Size = new System.Drawing.Size(87, 63);
+            this.addSubForumBtn.TabIndex = 11;
+            this.addSubForumBtn.Text = "add Sub-Forum";
+            this.addSubForumBtn.UseVisualStyleBackColor = true;
             // 
-            // addAdminBtn
+            // addModeratorBtn
             // 
-            this.addAdminBtn.Location = new System.Drawing.Point(374, 245);
-            this.addAdminBtn.Name = "addAdminBtn";
-            this.addAdminBtn.Size = new System.Drawing.Size(109, 25);
-            this.addAdminBtn.TabIndex = 18;
-            this.addAdminBtn.Text = "add moderator";
-            this.addAdminBtn.UseVisualStyleBackColor = true;
+            this.addModeratorBtn.Location = new System.Drawing.Point(374, 245);
+            this.addModeratorBtn.Name = "addModeratorBtn";
+            this.addModeratorBtn.Size = new System.Drawing.Size(109, 25);
+            this.addModeratorBtn.TabIndex = 18;
+            this.addModeratorBtn.Text = "add moderator";
+            this.addModeratorBtn.UseVisualStyleBackColor = true;
             // 
             // moderatorsComboBox
             // 
@@ -165,10 +165,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
-            this.Controls.Add(this.addAdminBtn);
+            this.Controls.Add(this.addModeratorBtn);
             this.Controls.Add(this.moderatorsComboBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.addSubForumBtn);
+            this.Controls.Add(this.moderatorsLbl);
             this.Controls.Add(this.SubForumTextBox);
             this.Controls.Add(this.SubForumNameLbl);
             this.Controls.Add(this.SubForumLbl);
@@ -197,10 +197,10 @@
         private System.Windows.Forms.Label SubForumLbl;
         private System.Windows.Forms.Label SubForumNameLbl;
         private System.Windows.Forms.TextBox SubForumTextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label moderatorsLbl;
+        private System.Windows.Forms.Button addSubForumBtn;
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
-        private System.Windows.Forms.Button addAdminBtn;
+        private System.Windows.Forms.Button addModeratorBtn;
         private System.Windows.Forms.ComboBox moderatorsComboBox;
     }
 }
