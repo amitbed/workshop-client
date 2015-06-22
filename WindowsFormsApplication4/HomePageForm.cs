@@ -49,33 +49,32 @@ namespace WindowsFormsApplication4
                 HttpResponseMessage resp = client.GetAsync("api/ApiForum").Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                 string response = resp.Content.ReadAsAsync<string>().Result;
-                if (String.IsNullOrEmpty(response))
+                if (response == null || String.IsNullOrEmpty(response))
                 {
-                    listBox1.Text = "No Forums in the system";
+                    ForumListBox.Items.Add("No Forums in the system");
                 }
                 else
                 {
                     List<string> result = response.Split(' ').ToList();
                     foreach (string s in result)
                     {
-                        listBox1.Items.Add(s);
+                        ForumListBox.Items.Add(s);
                     }
                 }
 
                 HttpResponseMessage resp1 = client.GetAsync("api/ApiMember").Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
-                string response1 = resp1.Content.ReadAsAsync<string>().Result;
+                List<string> response1 = resp1.Content.ReadAsAsync<List<string>>().Result;
 
-                if (String.IsNullOrEmpty(response1))
+                if (response1 == null || response1.Count == 0 || String.IsNullOrEmpty(response1.ElementAt(0)))
                 {
-                    listBox1.Text = "No Members in the system";
+                    adminsComboBox.Text = "no members";
                 }
                 else
                 {
-                    List<string> result = response1.Split(' ').ToList();
-                    foreach (string s in result)
+                    foreach (string s in response1)
                     {
-                        listBox1.Items.Add(s);
+                        adminsComboBox.Items.Add(s);
                     }
                 }
 
@@ -109,7 +108,32 @@ namespace WindowsFormsApplication4
 
         private void addnewforumBtn_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(ForumNameTextBox.Text);
+            var ForumName = ForumNameTextBox.Text;
+            ForumListBox.Items.Add(ForumName);
+            var description = DescriptionRichTextBox.Text;
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            try
+            {
+                HttpResponseMessage resp = client.PutAsJsonAsync("api/ApiForum", ForumName, admins, username).Result; //PostAsJsonAsync("api/ApiForum").Result;
+                resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                string response = resp.Content.ReadAsAsync<string>().Result;
+                if (response == null || String.IsNullOrEmpty(response))
+                {
+                    ForumListBox.Items.Add("No Forums in the system");
+                }
+                else
+                {
+                    List<string> result = response.Split(' ').ToList();
+                    foreach (string s in result)
+                    {
+                        ForumListBox.Items.Add(s);
+                    }
+                }
+            }
         }
     }
 }
