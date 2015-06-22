@@ -64,13 +64,8 @@ namespace WindowsFormsApplication4
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
-            //adminsComboBox.Items.Add("nofarb");
-            //adminsComboBox.Items.Add("amitbed");
-            //adminsComboBox.Items.Add("sagiav");
-            //ForumListBox.Items.Add("Food");
-
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.BaseAddress = new Uri("http://Amit-PC:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -97,7 +92,7 @@ namespace WindowsFormsApplication4
             }
 
             HttpClient client1 = new HttpClient();
-            client1.BaseAddress = new Uri("http://localhost:49417/");
+            client1.BaseAddress = new Uri("http://Amit-PC:49417/");
             client1.DefaultRequestHeaders.Accept.Clear();
             client1.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -143,10 +138,10 @@ namespace WindowsFormsApplication4
             {
                 loginToolStripMenuItem.Text = "Login";
                 setUsername("guest");
-                usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString(); // + this.getUsername();
+                usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString();
 
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.BaseAddress = new Uri("http://Amit-PC:49417/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -180,7 +175,7 @@ namespace WindowsFormsApplication4
             admins.Add(ForumName);
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.BaseAddress = new Uri("http://Amit-PC:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -211,7 +206,7 @@ namespace WindowsFormsApplication4
         {
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.BaseAddress = new Uri("http://Amit-PC:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try

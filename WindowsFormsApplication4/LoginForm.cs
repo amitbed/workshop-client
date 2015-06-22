@@ -66,7 +66,7 @@ namespace WindowsFormsApplication4
                 bool result = resp.Content.ReadAsAsync<bool>().Result;
                 if (result == false)
                 {
-                    MessageBox.Show("unknown error was accured, please try again");
+                    MessageBox.Show("Username or Password is wrong, please try again");
                     UsernameTextBox.Text = String.Empty;
                     PasswordTextBox.Text = String.Empty;
                 }
