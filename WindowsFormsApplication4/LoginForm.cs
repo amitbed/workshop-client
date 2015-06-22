@@ -64,9 +64,17 @@ namespace WindowsFormsApplication4
                 HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiLogin", args).Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                 bool result = resp.Content.ReadAsAsync<bool>().Result;
-
-                hpf.setUsername(username);
-                this.Close();
+                if (result == false)
+                {
+                    MessageBox.Show("unknown error was accured, please try again");
+                    UsernameTextBox.Text = String.Empty;
+                    PasswordTextBox.Text = String.Empty;
+                }
+                else
+                {
+                    hpf.setUsername(username);
+                    this.Close();
+                }
             }
             catch (Exception ex)
             {

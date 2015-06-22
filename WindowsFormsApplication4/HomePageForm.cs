@@ -90,8 +90,19 @@ namespace WindowsFormsApplication4
                         ForumListBox.Items.Add(s);
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
 
-                HttpResponseMessage resp1 = client.GetAsync("api/ApiMember").Result;
+            HttpClient client1 = new HttpClient();
+            client1.BaseAddress = new Uri("http://localhost:49417/");
+            client1.DefaultRequestHeaders.Accept.Clear();
+            client1.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            try
+            {
+                HttpResponseMessage resp1 = client1.GetAsync("api/ApiMember").Result;
                 resp1.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                 List<string> response1 = resp1.Content.ReadAsAsync<List<string>>().Result;
 
