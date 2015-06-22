@@ -58,22 +58,23 @@ namespace WindowsFormsApplication4
                 List<string> args = new List<string>();
                 args.Add(UsernameTextBox.Text.ToString());
                 args.Add(PasswordTextBox.Text.ToString());
+                args.Add(EmailTextBox.Text.ToString());
 
-                //HttpClient client = new HttpClient();
-                //client.BaseAddress = new Uri("http://localhost:49417/");
-                //client.DefaultRequestHeaders.Accept.Clear();
-                //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                //try
-                //{
-                //    HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiRegister", args).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
-                //    resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
-                //    string response = resp.Content.ReadAsAsync<string>().Result;
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                try
+                {
+                    HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiMember", args).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
+                    resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                    string response = resp.Content.ReadAsAsync<string>().Result;
                     this.Close();
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("Error: " + ex);
-                //}
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex);
+                }
             }
             else
             {

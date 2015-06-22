@@ -118,6 +118,7 @@
             this.ForumListBox.Name = "ForumListBox";
             this.ForumListBox.Size = new System.Drawing.Size(296, 191);
             this.ForumListBox.TabIndex = 9;
+            this.ForumListBox.SelectedIndexChanged += new System.EventHandler(this.ForumListBox_SelectedIndexChanged);
             // 
             // addnewforumBtn
             // 

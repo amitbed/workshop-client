@@ -43,6 +43,8 @@
             this.ConfimPasswordLbl = new System.Windows.Forms.Label();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.emailLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +104,7 @@
             // UsernameLbl
             // 
             this.UsernameLbl.AutoSize = true;
-            this.UsernameLbl.Location = new System.Drawing.Point(92, 143);
+            this.UsernameLbl.Location = new System.Drawing.Point(92, 123);
             this.UsernameLbl.Name = "UsernameLbl";
             this.UsernameLbl.Size = new System.Drawing.Size(67, 17);
             this.UsernameLbl.TabIndex = 5;
@@ -110,14 +112,14 @@
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(95, 163);
+            this.UsernameTextBox.Location = new System.Drawing.Point(95, 143);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(215, 25);
             this.UsernameTextBox.TabIndex = 6;
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(95, 239);
+            this.PasswordTextBox.Location = new System.Drawing.Point(95, 260);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(215, 25);
             this.PasswordTextBox.TabIndex = 8;
@@ -125,7 +127,7 @@
             // PasswordLbl
             // 
             this.PasswordLbl.AutoSize = true;
-            this.PasswordLbl.Location = new System.Drawing.Point(92, 219);
+            this.PasswordLbl.Location = new System.Drawing.Point(92, 240);
             this.PasswordLbl.Name = "PasswordLbl";
             this.PasswordLbl.Size = new System.Drawing.Size(64, 17);
             this.PasswordLbl.TabIndex = 7;
@@ -133,7 +135,7 @@
             // 
             // ConfimPasswordTextBox
             // 
-            this.ConfimPasswordTextBox.Location = new System.Drawing.Point(92, 323);
+            this.ConfimPasswordTextBox.Location = new System.Drawing.Point(95, 319);
             this.ConfimPasswordTextBox.Name = "ConfimPasswordTextBox";
             this.ConfimPasswordTextBox.Size = new System.Drawing.Size(215, 25);
             this.ConfimPasswordTextBox.TabIndex = 10;
@@ -141,7 +143,7 @@
             // ConfimPasswordLbl
             // 
             this.ConfimPasswordLbl.AutoSize = true;
-            this.ConfimPasswordLbl.Location = new System.Drawing.Point(92, 303);
+            this.ConfimPasswordLbl.Location = new System.Drawing.Point(95, 299);
             this.ConfimPasswordLbl.Name = "ConfimPasswordLbl";
             this.ConfimPasswordLbl.Size = new System.Drawing.Size(109, 17);
             this.ConfimPasswordLbl.TabIndex = 9;
@@ -149,7 +151,7 @@
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.Location = new System.Drawing.Point(231, 384);
+            this.RegisterBtn.Location = new System.Drawing.Point(235, 378);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(75, 32);
             this.RegisterBtn.TabIndex = 11;
@@ -157,12 +159,30 @@
             this.RegisterBtn.UseVisualStyleBackColor = true;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Location = new System.Drawing.Point(95, 197);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(215, 25);
+            this.EmailTextBox.TabIndex = 13;
+            // 
+            // emailLbl
+            // 
+            this.emailLbl.AutoSize = true;
+            this.emailLbl.Location = new System.Drawing.Point(92, 177);
+            this.emailLbl.Name = "emailLbl";
+            this.emailLbl.Size = new System.Drawing.Size(44, 17);
+            this.emailLbl.TabIndex = 12;
+            this.emailLbl.Text = "E-mail";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.emailLbl);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.ConfimPasswordTextBox);
             this.Controls.Add(this.ConfimPasswordLbl);
@@ -201,5 +221,7 @@
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.ToolStripMenuItem usernameToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.Label emailLbl;
     }
 }

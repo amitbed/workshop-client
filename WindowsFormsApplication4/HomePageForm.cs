@@ -25,18 +25,45 @@ namespace WindowsFormsApplication4
         {
             username = newUsername;
             usernameToolStripMenuItem.Text = "hello " + username;
-            loginToolStripMenuItem.Text = "Logout";
+            if (newUsername.Equals("guest"))
+            {
+                enterForumNameLbl.Hide();
+                ForumNameTextBox.Hide();
+                addAdminBtn.Hide();
+                adminsComboBox.Hide();
+                AdminsLbl.Hide();
+                addnewforumBtn.Hide();
+            }
+            else
+            {
+                loginToolStripMenuItem.Text = "Logout";
+            }
+            if (newUsername.Equals("superAdmin"))
+            {
+                enterForumNameLbl.Show();
+                ForumNameTextBox.Show();
+                addAdminBtn.Show();
+                adminsComboBox.Show();
+                AdminsLbl.Show();
+                addnewforumBtn.Show();
+            }
+
         }
 
         public HomePageForm()
         {
             InitializeComponent();
             usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString() + username;
+            enterForumNameLbl.Hide();
+            ForumNameTextBox.Hide();
+            addAdminBtn.Hide();
+            adminsComboBox.Hide();
+            AdminsLbl.Hide();
+            addnewforumBtn.Hide();
         }
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
-
             adminsComboBox.Items.Add("nofarb");
             adminsComboBox.Items.Add("amitbed");
             adminsComboBox.Items.Add("sagiav");
@@ -146,6 +173,32 @@ namespace WindowsFormsApplication4
                         ForumListBox.Items.Add(s);
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        private void ForumListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            try
+            {
+                HttpResponseMessage resp = client.GetAsync("api/ApiSubForum/" + ForumListBox.SelectedItem.ToString()).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
+                resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                string result = resp.Content.ReadAsAsync<string>().Result;
+                List<string> subForums = result.Split(' ').ToList();
+                foreach (string s in subForums)
+                {
+                    ForumListBox.Items.Add(s);
+                }
+
+                Form forumForm = new ForumForm(this, ForumListBox.SelectedItem.ToString(), subForums);
             }
             catch (Exception ex)
             {

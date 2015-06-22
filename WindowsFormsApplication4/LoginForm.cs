@@ -20,7 +20,7 @@ namespace WindowsFormsApplication4
             InitializeComponent();
             this.hpf = hpf;
             usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString() + hpf.getUsername();
-            
+
             if (hpf.username != "guest")
             {
                 loginToolStripMenuItem.Text = "Logout";
@@ -63,7 +63,6 @@ namespace WindowsFormsApplication4
             {
                 HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiLogin", args).Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
-                string response = resp.Content.ReadAsAsync<string>().Result;
             }
             catch (Exception ex)
             {
