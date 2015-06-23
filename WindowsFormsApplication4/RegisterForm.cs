@@ -48,7 +48,7 @@ namespace WindowsFormsApplication4
                 usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString() + hpf.getUsername();
 
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.BaseAddress = new Uri("http://amit-pc:49417/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication4
                 args.Add(EmailTextBox.Text.ToString());
 
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("http://localhost:49417/");
+                client.BaseAddress = new Uri("http://amit-pc:49417/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
