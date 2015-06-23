@@ -73,6 +73,7 @@ namespace WindowsFormsApplication4
                 else
                 {
                     hpf.setUsername(username);
+                    hpf.updateListOfMembers();
                     this.Close();
                 }
             }

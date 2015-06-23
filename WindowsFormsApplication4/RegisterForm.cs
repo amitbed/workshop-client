@@ -84,6 +84,7 @@ namespace WindowsFormsApplication4
                     HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiMember", args).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
                     resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                     string response = resp.Content.ReadAsAsync<string>().Result;
+                    hpf.updateListOfMembers();
                     this.Close();
                 }
                 catch (Exception ex)

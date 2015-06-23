@@ -16,7 +16,6 @@ C:\Users\נופר\Documents\GitHub\workshop-client\WindowsFormsApplication4\obj\
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe.config
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.pdb
-C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.HomePageForm.resources
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.Form1.resources
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.ForumForm.resources

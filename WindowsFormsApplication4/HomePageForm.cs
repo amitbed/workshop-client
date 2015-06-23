@@ -91,16 +91,22 @@ namespace WindowsFormsApplication4
                 MessageBox.Show("Error: " + ex);
             }
 
-            HttpClient client1 = new HttpClient();
-            client1.BaseAddress = new Uri("http://amit-pc:49417/");
-            client1.DefaultRequestHeaders.Accept.Clear();
-            client1.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            updateListOfMembers();
+        }
+
+        public void updateListOfMembers()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://amit-pc:49417/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
             {
-                HttpResponseMessage resp1 = client1.GetAsync("api/ApiMember").Result;
+                HttpResponseMessage resp1 = client.GetAsync("api/ApiMember").Result;
                 resp1.EnsureSuccessStatusCode();  // Throw exception if not a success code.
                 List<string> response1 = resp1.Content.ReadAsAsync<List<string>>().Result;
-
+                adminsComboBox.Items.Clear();
+                adminsComboBox.Text = "";
                 if (response1 == null || response1.Count == 0 || String.IsNullOrEmpty(response1.ElementAt(0)))
                 {
                     adminsComboBox.Text = "no members";
@@ -118,6 +124,7 @@ namespace WindowsFormsApplication4
             {
                 MessageBox.Show("Error: " + ex);
             }
+
         }
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
