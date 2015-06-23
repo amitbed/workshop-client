@@ -23,7 +23,7 @@ namespace WindowsFormsApplication4
         private void button1_Click(object sender, EventArgs e)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.BaseAddress = new Uri("http://amit-pc:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try

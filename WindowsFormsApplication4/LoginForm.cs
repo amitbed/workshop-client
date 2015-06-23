@@ -56,7 +56,7 @@ namespace WindowsFormsApplication4
             args.Add(password);
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:49417/");
+            client.BaseAddress = new Uri("http://amit-pc:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
