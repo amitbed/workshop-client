@@ -65,7 +65,7 @@ namespace WindowsFormsApplication4
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://Amit-PC:49417/");
+            client.BaseAddress = new Uri("http://localhost:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication4
             }
 
             HttpClient client1 = new HttpClient();
-            client1.BaseAddress = new Uri("http://Amit-PC:49417/");
+            client1.BaseAddress = new Uri("http://localhost:49417/");
             client1.DefaultRequestHeaders.Accept.Clear();
             client1.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication4
                 usernameToolStripMenuItem.Text = usernameToolStripMenuItem.Text.ToString();
 
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("http://Amit-PC:49417/");
+                client.BaseAddress = new Uri("http://localhost:49417/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
@@ -175,7 +175,7 @@ namespace WindowsFormsApplication4
             admins.Add(ForumName);
 
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://Amit-PC:49417/");
+            client.BaseAddress = new Uri("http://localhost:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
@@ -204,15 +204,19 @@ namespace WindowsFormsApplication4
 
         private void ForumListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://Amit-PC:49417/");
+            client.BaseAddress = new Uri("http://localhost:49417/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             try
             {
-                HttpResponseMessage resp = client.GetAsync("api/ApiSubForum/" + ForumListBox.SelectedItem.ToString()).Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
+                string arg=ForumListBox.SelectedItem.ToString();
+                List<string> args = new List<string>();
+                args.Add(arg);
+                //HttpResponseMessage resp = client.GetAsync("api/ApiSubForum/").Result;//.Result; //PostAsJsonAsync("api/ApiForum").Result;
+                HttpResponseMessage resp = client.PostAsJsonAsync("api/ApiForum", args).Result;
                 resp.EnsureSuccessStatusCode();  // Throw exception if not a success code.
+                
                 string result = resp.Content.ReadAsAsync<string>().Result;
                 List<string> subForums = result.Split(' ').ToList();
                 foreach (string s in subForums)

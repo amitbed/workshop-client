@@ -38,5 +38,10 @@ namespace WindowsFormsApplication4
                 MessageBox.Show("Error: " + ex);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

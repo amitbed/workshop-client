@@ -27,3 +27,20 @@ C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csproj.GenerateResource.Cache
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.exe
 C:\Users\Amit\Documents\university\שנה ג\סמסטר ו\סדנא\workshop-mvc\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.pdb
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe.config
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.exe
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.pdb
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.exe
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\WindowsFormsApplication4.pdb
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\Newtonsoft.Json.dll
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\System.Net.Http.Formatting.dll
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\bin\Release\System.Net.Http.Formatting.xml
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.HomePageForm.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.Form1.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.ForumForm.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.LoginForm.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.Properties.Resources.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.RegisterForm.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.SubForumForm.resources
+\\psf\Home\Desktop\workshop-client\WindowsFormsApplication4\obj\Release\WindowsFormsApplication4.csproj.GenerateResource.Cache

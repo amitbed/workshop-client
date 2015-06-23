@@ -55,20 +55,20 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(794, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(794, 48);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // registerToolStripMenuItem
             // 
             this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.registerToolStripMenuItem.Size = new System.Drawing.Size(121, 40);
             this.registerToolStripMenuItem.Text = "Register";
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(90, 40);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
@@ -76,7 +76,7 @@
             // 
             this.usernameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usernameToolStripMenuItem.Image")));
             this.usernameToolStripMenuItem.Name = "usernameToolStripMenuItem";
-            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.usernameToolStripMenuItem.Size = new System.Drawing.Size(106, 40);
             this.usernameToolStripMenuItem.Text = "hello ";
             // 
             // ForumNameLbl
@@ -85,18 +85,18 @@
             this.ForumNameLbl.Font = new System.Drawing.Font("Segoe Print", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForumNameLbl.Location = new System.Drawing.Point(75, 37);
             this.ForumNameLbl.Name = "ForumNameLbl";
-            this.ForumNameLbl.Size = new System.Drawing.Size(352, 84);
+            this.ForumNameLbl.Size = new System.Drawing.Size(709, 168);
             this.ForumNameLbl.TabIndex = 4;
             this.ForumNameLbl.Text = "Forum Name";
             // 
             // subForumsListBox
             // 
             this.subForumsListBox.FormattingEnabled = true;
-            this.subForumsListBox.ItemHeight = 17;
+            this.subForumsListBox.ItemHeight = 36;
             this.subForumsListBox.Location = new System.Drawing.Point(89, 160);
             this.subForumsListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.subForumsListBox.Name = "subForumsListBox";
-            this.subForumsListBox.Size = new System.Drawing.Size(237, 225);
+            this.subForumsListBox.Size = new System.Drawing.Size(237, 220);
             this.subForumsListBox.TabIndex = 5;
             // 
             // SubForumLbl
@@ -104,7 +104,7 @@
             this.SubForumLbl.AutoSize = true;
             this.SubForumLbl.Location = new System.Drawing.Point(86, 139);
             this.SubForumLbl.Name = "SubForumLbl";
-            this.SubForumLbl.Size = new System.Drawing.Size(80, 17);
+            this.SubForumLbl.Size = new System.Drawing.Size(157, 36);
             this.SubForumLbl.TabIndex = 6;
             this.SubForumLbl.Text = "Sub Forums:";
             // 
@@ -113,7 +113,7 @@
             this.SubForumNameLbl.AutoSize = true;
             this.SubForumNameLbl.Location = new System.Drawing.Point(371, 139);
             this.SubForumNameLbl.Name = "SubForumNameLbl";
-            this.SubForumNameLbl.Size = new System.Drawing.Size(110, 17);
+            this.SubForumNameLbl.Size = new System.Drawing.Size(215, 36);
             this.SubForumNameLbl.TabIndex = 7;
             this.SubForumNameLbl.Text = "Sub Forum Name";
             // 
@@ -121,15 +121,16 @@
             // 
             this.SubForumTextBox.Location = new System.Drawing.Point(374, 160);
             this.SubForumTextBox.Name = "SubForumTextBox";
-            this.SubForumTextBox.Size = new System.Drawing.Size(201, 25);
+            this.SubForumTextBox.Size = new System.Drawing.Size(201, 42);
             this.SubForumTextBox.TabIndex = 8;
+            this.SubForumTextBox.TextChanged += new System.EventHandler(this.SubForumTextBox_TextChanged);
             // 
             // moderatorsLbl
             // 
             this.moderatorsLbl.AutoSize = true;
             this.moderatorsLbl.Location = new System.Drawing.Point(371, 194);
             this.moderatorsLbl.Name = "moderatorsLbl";
-            this.moderatorsLbl.Size = new System.Drawing.Size(126, 17);
+            this.moderatorsLbl.Size = new System.Drawing.Size(241, 36);
             this.moderatorsLbl.TabIndex = 9;
             this.moderatorsLbl.Text = "Choose Moderators";
             // 
@@ -141,6 +142,7 @@
             this.addSubForumBtn.TabIndex = 11;
             this.addSubForumBtn.Text = "add Sub-Forum";
             this.addSubForumBtn.UseVisualStyleBackColor = true;
+            this.addSubForumBtn.Click += new System.EventHandler(this.addSubForumBtn_Click);
             // 
             // addModeratorBtn
             // 
@@ -156,12 +158,12 @@
             this.moderatorsComboBox.FormattingEnabled = true;
             this.moderatorsComboBox.Location = new System.Drawing.Point(374, 214);
             this.moderatorsComboBox.Name = "moderatorsComboBox";
-            this.moderatorsComboBox.Size = new System.Drawing.Size(145, 25);
+            this.moderatorsComboBox.Size = new System.Drawing.Size(145, 44);
             this.moderatorsComboBox.TabIndex = 17;
             // 
             // ForumForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 442);

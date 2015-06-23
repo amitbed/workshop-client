@@ -52,5 +52,10 @@ namespace WindowsFormsApplication4
                 }
             }
         }
+
+        private void SubForumForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

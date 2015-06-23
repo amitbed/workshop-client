@@ -103,5 +103,15 @@ namespace WindowsFormsApplication4
                 }
             }
         }
+
+        private void addSubForumBtn_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SubForumTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
